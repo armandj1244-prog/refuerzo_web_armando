@@ -1,43 +1,161 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Contacto</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contáctanos para servicios de mantenimiento y seguridad informática">
+    <title>Sistemas IT | Contacto</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="contact">
+<body>
 
 <header>
-<nav>
-<h1>Sistemas IT</h1>
-<ul>
-<li><a href="index.html">Inicio</a></li>
-<li><a href="about.html">Nosotros</a></li>
-<li><a href="contact.html">Contacto</a></li>
-</ul>
-</nav>
+    <nav>
+        <div class="logo">
+            <h1>Sistemas IT</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about.html">Nosotros</a></li>
+            <li><a href="contact.html" class="active">Contacto</a></li>
+        </ul>
+        <div class="menu-toggle">☰</div>
+    </nav>
 </header>
 
-<section class="contenido">
-<h2>Contáctanos</h2>
+<main>
+    <section class="contact-container">
+        <div class="contact-info">
+            <h2>Contáctanos</h2>
+            <p>Estamos aquí para ayudarte. Completa el formulario o utiliza nuestros datos de contacto.</p>
+            
+            <div class="contact-details">
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <div>
+                        <h4>Email</h4>
+                        <p>armandj1244@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <div>
+                        <h4>Teléfono</h4>
+                        <p>+503 6963 3870</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🕒</span>
+                    <div>
+                        <h4>Horario de atención</h4>
+                        <p>Lunes a Viernes<br>8:00 am - 5:00 pm</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <div>
+                        <h4>Ubicación</h4>
+                        <p>San Salvador, El Salvador</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<form>
-<input type="text" placeholder="Nombre" required>
-<input type="email" placeholder="Correo" required>
-<textarea placeholder="Mensaje"></textarea>
-<button>Enviar</button>
-</form>
-
-<h3>Información</h3>
-<p>Email: armandj1244@gmail.com</p>
-<p>Teléfono: +503 69633870</p>
-<p>Horario: Lunes a Viernes 8:00am - 5:00pm</p>
-</section>
+        <div class="contact-form">
+            <h3>Envíanos un mensaje</h3>
+            <form id="contactForm" action="#" method="POST">
+                <div class="form-group">
+                    <input type="text" id="nombre" placeholder="Nombre completo" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="telefono" placeholder="Teléfono (opcional)">
+                </div>
+                <div class="form-group">
+                    <select id="servicio">
+                        <option value="">Selecciona un servicio</option>
+                        <option value="preventivo">Mantenimiento Preventivo</option>
+                        <option value="correctivo">Mantenimiento Correctivo</option>
+                        <option value="seguridad">Seguridad Informática</option>
+                        <option value="soporte">Soporte Técnico</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea id="mensaje" placeholder="Mensaje" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar mensaje</button>
+                <div id="formMessage" class="form-message"></div>
+            </form>
+        </div>
+    </section>
+</main>
 
 <footer>
-<p>© 2026 Sistemas IT</p>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Sistemas IT</h3>
+            <p>Soluciones profesionales en mantenimiento y seguridad informática.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Enlaces rápidos</h3>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Nosotros</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contacto</h3>
+            <p>📧 armandj1244@gmail.com</p>
+            <p>📞 +503 69633870</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Sistemas IT | Proyecto educativo</p>
+    </div>
 </footer>
+
+<script>
+    // Menú responsive
+    document.querySelector('.menu-toggle')?.addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('show');
+    });
+
+    // Formulario de contacto con validación
+    document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const nombre = document.getElementById('nombre').value;
+        const email = document.getElementById('email').value;
+        const mensaje = document.getElementById('mensaje').value;
+        const messageDiv = document.getElementById('formMessage');
+        
+        if (!nombre || !email || !mensaje) {
+            messageDiv.innerHTML = '❌ Por favor completa todos los campos obligatorios.';
+            messageDiv.className = 'form-message error';
+            return;
+        }
+        
+        if (!email.includes('@') || !email.includes('.')) {
+            messageDiv.innerHTML = '❌ Por favor ingresa un correo electrónico válido.';
+            messageDiv.className = 'form-message error';
+            return;
+        }
+        
+        messageDiv.innerHTML = '✅ ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.';
+        messageDiv.className = 'form-message success';
+        
+        // Limpiar formulario
+        document.getElementById('contactForm').reset();
+        
+        setTimeout(() => {
+            messageDiv.style.display = 'none';
+        }, 5000);
+    });
+</script>
 
 </body>
 </html>

@@ -2,88 +2,140 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Sistemas Informáticos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce nuestros servicios de mantenimiento y aseguramiento de sistemas informáticos">
+    <title>Sistemas IT | Acerca de nosotros</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
     <nav>
-        <h1>Sistemas IT</h1>
-        <ul>
+        <div class="logo">
+            <h1>Sistemas IT</h1>
+        </div>
+        <ul class="nav-links">
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="about.html">Acerca</a></li>
+            <li><a href="about.html" class="active">Acerca</a></li>
             <li><a href="contact.html">Contacto</a></li>
         </ul>
+        <div class="menu-toggle">☰</div>
     </nav>
 </header>
 
-<section class="hero">
-    <h2>Mantenimiento y Aseguramiento de Sistemas Informáticos</h2>
-    <p>Soluciones tecnológicas para garantizar el rendimiento, seguridad y continuidad de los sistemas.</p>
-</section>
+<main>
+    <section class="hero-small">
+        <h2>Mantenimiento y Aseguramiento de Sistemas Informáticos</h2>
+        <p>Soluciones tecnológicas para garantizar el rendimiento, seguridad y continuidad de los sistemas.</p>
+    </section>
 
-<section class="contenido">
-    <h2>¿Qué es el mantenimiento informático?</h2>
-    <p>
-        El mantenimiento de sistemas informáticos consiste en un conjunto de acciones preventivas y correctivas
-        destinadas a asegurar el correcto funcionamiento de equipos, redes y software.
-    </p>
-
-    <div class="grid">
-        <div class="card">
-            <h3>Mantenimiento Preventivo</h3>
-            <p>
-                Incluye revisiones periódicas, limpieza de equipos, actualización de software y monitoreo constante 
-                para evitar fallos antes de que ocurran.
-            </p>
+    <section class="contenido">
+        <div class="about-intro">
+            <h2 class="section-title">¿Qué es el mantenimiento informático?</h2>
+            <p>El mantenimiento de sistemas informáticos consiste en un conjunto de acciones preventivas y correctivas destinadas a asegurar el correcto funcionamiento de equipos, redes y software.</p>
         </div>
 
-        <div class="card">
-            <h3>Mantenimiento Correctivo</h3>
-            <p>
-                Se realiza cuando ocurre una falla. Su objetivo es diagnosticar y reparar problemas en hardware 
-                o software para restablecer el servicio.
-            </p>
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">🔍</div>
+                <h3>Mantenimiento Preventivo</h3>
+                <p>Incluye revisiones periódicas, limpieza de equipos, actualización de software y monitoreo constante para evitar fallos antes de que ocurran.</p>
+                <div class="card-footer">
+                    <span class="badge">Recomendado cada 3 meses</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🛠️</div>
+                <h3>Mantenimiento Correctivo</h3>
+                <p>Se realiza cuando ocurre una falla. Su objetivo es diagnosticar y reparar problemas en hardware o software para restablecer el servicio.</p>
+                <div class="card-footer">
+                    <span class="badge">Respuesta en 24h</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📈</div>
+                <h3>Mantenimiento Predictivo</h3>
+                <p>Utiliza herramientas de análisis y monitoreo para anticipar fallos basándose en datos y rendimiento del sistema.</p>
+                <div class="card-footer">
+                    <span class="badge">Tecnología avanzada</span>
+                </div>
+            </div>
         </div>
 
-        <div class="card">
-            <h3>Mantenimiento Predictivo</h3>
-            <p>
-                Utiliza herramientas de análisis y monitoreo para anticipar fallos basándose en datos y rendimiento 
-                del sistema.
-            </p>
-        </div>
-    </div>
-
-    <h2>Importancia de la seguridad informática</h2>
-    <p>
-        La seguridad informática protege la información y los sistemas contra accesos no autorizados, ataques 
-        cibernéticos y pérdida de datos. Es fundamental implementar políticas de seguridad, copias de respaldo 
-        y sistemas de protección como antivirus y firewalls.
-    </p>
-
-    <div class="grid">
-        <div class="card">
-            <h3>Confidencialidad</h3>
-            <p>Protección de la información para que solo sea accesible por personas autorizadas.</p>
+        <div class="security-section">
+            <h2 class="section-title">Importancia de la seguridad informática</h2>
+            <p>La seguridad informática protege la información y los sistemas contra accesos no autorizados, ataques cibernéticos y pérdida de datos. Es fundamental implementar políticas de seguridad, copias de respaldo y sistemas de protección como antivirus y firewalls.</p>
         </div>
 
-        <div class="card">
-            <h3>Integridad</h3>
-            <p>Garantiza que los datos no sean alterados o modificados sin autorización.</p>
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">🔒</div>
+                <h3>Confidencialidad</h3>
+                <p>Protección de la información para que solo sea accesible por personas autorizadas.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📋</div>
+                <h3>Integridad</h3>
+                <p>Garantiza que los datos no sean alterados o modificados sin autorización.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">⏱️</div>
+                <h3>Disponibilidad</h3>
+                <p>Asegura que los sistemas estén operativos cuando se necesiten.</p>
+            </div>
         </div>
 
-        <div class="card">
-            <h3>Disponibilidad</h3>
-            <p>Asegura que los sistemas estén operativos cuando se necesiten.</p>
+        <div class="stats-section">
+            <div class="stat">
+                <span class="stat-number">+500</span>
+                <span class="stat-label">Equipos reparados</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">99%</span>
+                <span class="stat-label">Satisfacción</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">Soporte</span>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</main>
 
 <footer>
-    <p>© 2026 Sistemas IT | Proyecto educativo</p>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Sistemas IT</h3>
+            <p>Soluciones profesionales en mantenimiento y seguridad informática.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Enlaces rápidos</h3>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Nosotros</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contacto</h3>
+            <p>📧 armandj1244@gmail.com</p>
+            <p>📞 +503 69633870</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Sistemas IT | Proyecto educativo</p>
+    </div>
 </footer>
+
+<script>
+    document.querySelector('.menu-toggle')?.addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('show');
+    });
+</script>
 
 </body>
 </html>
